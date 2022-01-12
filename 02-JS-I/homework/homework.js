@@ -110,9 +110,8 @@ function esPar(num) {
     // Tu código:
     if(num % 2 == 0){
         return true;
-        }else{
-            return false;
         }
+        return false;    
 }
 
 function esImpar(num) {
@@ -142,7 +141,7 @@ function elevarAlCubo(num) {
 function elevar(num, exponent) {
     // Devuelve el valor de "num" elevado al exponente dado en "exponent"
     // Tu código:
-    return Math.pow(num*exponent);
+    return Math.pow(num, exponent);
 }
 
 function redondearNumero(num) {
@@ -168,9 +167,9 @@ function esPositivo(numero) {
     //Si el número es positivo, devolver ---> "Es positivo"
     //Si el número es negativo, devolver ---> "Es negativo"
     //Si el número es 0, devuelve false
-    if(num === 0) {
-        return true;
-      } else if(num > 0) {
+    if(numero === 0) {
+        return false;
+      } else if(numero > 0) {
         return "Es positivo";        
       }else {
         return "Es negativo";
@@ -188,7 +187,7 @@ function combinarNombres(nombre, apellido) {
     // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
     // Ejemplo: "Soy", "Henry" -> "Soy Henry"
     // Tu código:
-    var conct = nombre + '' + apellido;
+    var conct = nombre + ' ' + apellido;
     return conct;
 }
 
@@ -196,8 +195,7 @@ function obtenerSaludo(nombre) {
     // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
     // "Martin" -> "Hola Martin!"
     // Tu código:
-    var conct = Hola + '' + nombre + '!';
-    return conct;
+    return 'Hola ' + nombre + '!';
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -237,19 +235,12 @@ function esVocal(letra) {
     // Si no es vocal, tambien debe devolver "Dato incorrecto".
     //Escribe tu código aquí
     if(letra.length > 1){
-        return "Dato incorrecto";
-    if (letra === "a"){
-        return "Es vocal.";
-    }else if (letra === "e"){
-        return "Es vocal.";
-    }else if (letra === "i"){
-        return "Es vocal.";
-    }else if (letra === "o"){
-        return "Es vocal.";
-    }else if (letra === "u"){
-        return "Es vocal.";
-    }else
-        return "Dato incorrecto."
+        return "Dato incorrecto"
+    }
+    if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+        return "Es vocal";
+    }
+        return "Dato incorrecto"
 }
 
 // No modificar nada debajo de esta línea
@@ -289,4 +280,4 @@ module.exports = {
     areaDelTriangulo,
     deEuroAdolar,
     esVocal,
-};
+  };
